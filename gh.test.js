@@ -54,9 +54,9 @@ describe("page gitHub actions", () => {
     console.log(actual);
     await expect(actual).toEqual(expected);
   });
+  
   test("The title h2 content", async () => {
     const expected = ("Kick off workflows on any  GitHub event to automate tasks");
-   // await page.waitForSelector('h2');
     const title = await page.$eval("#features h2", (link) => link.textContent);
     console.log (title);
     await expect(title).toContain(expected);
